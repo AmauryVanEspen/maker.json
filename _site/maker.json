@@ -1,0 +1,37 @@
+{
+  "name": "iHub Nairobi and Gearbox",
+  "status": "unknown",
+  "type": [
+      "Incubator",
+      "Tech hub",
+      "Hackerspace",
+      "Coworking space"
+  ],
+  "source": null,
+  "address": "4th floor, Bishop Magua Centre, Ngong Road",
+  "city": "Nairobi",
+  "division": "Nairobi",
+  "country": "Kenya",
+  "latitude": -1.298561,
+  "longitude": 36.791068,
+  "description": "Nairobi's Innovation Hub for the technology community is an open space for the technologists, investors, tech companies and hackers in the area. This space is a tech community facility with a focus on young entrepreneurs, web and mobile phone programmers, designers and researchers. It is part open community workspace (co-working), part vector for investors and VCs and part incubator. / *iHub is Nairobis innovation hub for the technology community and serve as an open space for the technologists, investors, tech companies and hackers in the area. This space is a tech community facility with a focus on young entrepreneurs, web and mobile phone programmers, designers and researchers.",
+  "email": "info@ihub.co.ke",
+  "website": "http://www.ihub.co.ke",
+  "social": {
+      "facebook": "https://www.facebook.com/pages/IHub/104916726273623",
+      "twitter": "http://www.twitter.com/iHub",
+      "google": "https://plus.google.com/u/1/b/110205481031337326623/110205481031337326623/posts",
+      "youtube": "http://www.youtube.com/user/ihubnairobi",
+      "flickr": "http://www.flickr.com/photos/ihub/"
+  },
+  "mailing-list": null,
+  "phone": null,
+  "tools": null,
+  "last-updated": "2016-05-22",
+  "number-of-members": null,
+  "date-founded": "2010-03",
+  "size-of-rooms": null,
+  "open-to-exchanges": false,
+  "open-to-residencies": false,
+  "membership-fee": null
+}
