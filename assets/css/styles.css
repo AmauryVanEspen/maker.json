@@ -16,10 +16,6 @@ h2.title {
     padding-bottom: .3rem;
 }
 
-#bento ol { counter-reset: item }
-#bento li { display: block }
-#bento li:before { content: counters(item, ".") ". "; counter-increment: item }
-
 #results {
     height: 200px;
     border: 2px #000 solid;

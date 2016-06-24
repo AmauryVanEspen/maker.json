@@ -4,11 +4,25 @@ title: Home
 ---
 
 <h2 class="title">What is maker.json?</h2>
-<p><strong>Makers API is a schema for collecting standardized information about makerspaces, an API for sharing that information, and a map to browse and sort. The goal is to connect makers around the world, helping them collaborate and co-create.</strong></p>
-<br>
+
+<p><strong>maker.json is a schema to promote standards in the information we share about DIY spaces around the world toward fostering further awareness and improving collaboration.</strong></p>
+<hr>
 <p>There are a growing number of makerspaces, hackerspaces, DIY shops, innovation labs, coworking spaces, tech-enabled libraries, et cetera, all around the world, filling with people working on amazing projects from Arduinos to (RPi) Zeroes.</p>
 <p>So many, in fact, it's increasingly hard to keep up. When I started looking around for lists, I found them: groups compiling data in Google Sheets, JSON files, and maps and collecting a variety of information in a variety of formats.</p>
-<p>Enter the Makers API project. This includes the maker.json schema, a small file you put at the root of website or at a public repository, storing standardized information about your space, its status, who is involved, what kind of tools are available,
-    and where people can learn more. Think of it as a structured "README" file.</p>
-<p>What does it look like? <a href="/example">Check out an example of the maker.json specification.</a></p>
+<p>Enter maker.json, a small file you put at the root of website or at a public repository, storing standardized information about your space, its status, who is involved, what kind of tools are available, and where people can learn more. Think of it as a structured "README" file.</p>
+<p>What does it look like? <a href="./example">Check out an example of the maker.json specification.</a></p>
 <p>From there, we've taken the first step in standardizing the information collected from so many other groups to this format, and built a structured API around this schema.</p>
+
+<hr>
+
+<h2 id="who">Who is behind this?</h2>
+<p>Maker.json was created and launched by <a href="http://rrbaker.com">Rob Baker</a> in June 2016 to help establish and improve global networks of makers.</p>
+<p>The original data populating the map is taken from several teams and organizations who are the leading champions of the maker movement, whether it's creating these spaces or researching how to make them more useful to their communities. The original data sources came from the following sources, with great thanks:</p>
+<ul>
+  <li><a href="http://anansegroup.com">Ananse Group</a></li>
+  <li><a href="http://movement.open.co/hubs">open.co</a></li>
+  <li><a href="https://wiki.hackerspaces.org/List_of_ALL_hackerspaces">Hackerspaces.org</a></li>
+  <li><a href="http://www.fabfoundation.org/fab-labs/">Fab Lab</a></li>
+  <li><a href="http://www.techshop.ws/locations.html">TechShop</a></li>
+</ul>
+<p>This maker.json schema borrows heavily (and gratefully) from <a href="https://github.com/BetaNYC/civic.json">civic.json</a>, a similar initiative originally created by BetaNYC in 2014 as "a metadata standard for civic technology projects that is intended to complement project information in a github repository." Additionally, and including this website, we've taken from <a href="http://open.dc.gov/civic.json/">contributions from the Code for DC volunteers and employees of the Washington DC District Government,</a> extending this specification to make it useful for a broader user base. A big thanks to those teams for their work and inspiration.</p>

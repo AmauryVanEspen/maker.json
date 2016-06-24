@@ -18,25 +18,26 @@ title: Specification
 <ol>
 	<li><code>name</code> - a string specifying the project's name.</li>
 	<li><code>status</code> - a string (enum) indicating the status of the project. The value MUST be one of:
-	<ol>
-		<li><code>"Unknown"</code> - No update or recent update provided.</li>
-		<li><code>"Active"</code> - The space is open.</li>
-		<li><code>"Inactive"</code> - The space is closed</li>
-		<li><code>"Planned"</code> - The space is in the planning stages to open.</li>
-	</ol>
+		<ul>
+			<li><code>"Unknown"</code> - No update or recent update provided.</li>
+			<li><code>"Active"</code> - The space is open.</li>
+			<li><code>"Inactive"</code> - The space is closed</li>
+			<li><code>"Planned"</code> - The space is in the planning stages to open.</li>
+		</ul>
 	</li>
 	<li><code>type</code> - An array specifying the type of space. Multiple types are allowed.</li>
-	<ol>
+	<ul>
 		<li><code>"Makerspace"</code> - Your makerspace shop with fabrication tools, computer stations, and community space.</li>
-						<li><code>"Fab Lab"</code> - As above, but ONLY those officially affiliated as Fab Labs.</li>
-						<li><code>"TechShop"</code> - As above, but ONLY those officially affiliated as TechShops.</li>
-						<li><code>"Hackerspace"</code> - A community space more focused on </li>
-						<li><code>"Coworking Space"</code> - Open floor plans for startups and small businesses, not necessarily hackers only.</li>
-						<li><code>"Innovation Lab"</code> - A space within larger organizations focused on emerging innovations or researching and development practices.</li>
-						<li><code>"University Lab"</code> - Sharing many of the principles above but supported by an educational institution and may or may not be only open to students.</li>
-						<li><code>"Library"</code> - Libraries as we know them but now offerings access to and workshops about DIY and fabrication topics (i.e. 3D printers).</li>
-	</ol>
+		<li><code>"Fab Lab"</code> - As above, but ONLY those officially affiliated as Fab Labs.</li>
+		<li><code>"TechShop"</code> - As above, but ONLY those officially affiliated as TechShops.</li>
+		<li><code>"Hackerspace"</code> - A community space more focused on </li>
+		<li><code>"Coworking Space"</code> - Open floor plans for startups and small businesses, not necessarily hackers only.</li>
+		<li><code>"Innovation Lab"</code> - A space within larger organizations focused on emerging innovations or researching and development practices.</li>
+		<li><code>"University Lab"</code> - Sharing many of the principles above but supported by an educational institution and may or may not be only open to students.</li>
+		<li><code>"Library"</code> - Libraries as we know them but now offerings access to and workshops about DIY and fabrication topics (i.e. 3D printers).</li>
+	</ul>
 </ol>
+
 
 <h4>Recommended</h4>
 <p>In addition to the above fields, the following fields SHOULD be included in every maker.json, where applicable:</p>
