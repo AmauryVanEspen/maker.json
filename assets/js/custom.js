@@ -35,7 +35,7 @@ $.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/gh-pages/schemas
 });
 
 // Validator
-$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/master/schema.json", function(schema) {
+$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/gh-pages/schemas/maker-v1.json", function(schema) {
     $("#validate").click(function() {
         try {
             var civic = JSON.parse($("#to_validate").val());
