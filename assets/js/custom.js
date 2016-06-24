@@ -1,10 +1,10 @@
 // Example
-$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/master/maker.json", function(json) {
+$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/gh-pages/schemas/maker-v1.json", function(json) {
     $("#example_json").append(JSON.stringify(json, null, "  "));
 });
 
 // Builder
-$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/master/schema.json", function(json) {
+$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/gh-pages/schemas/maker-v1.json", function(json) {
     $("#form").alpaca({
         "schema": json,
         "options": {
