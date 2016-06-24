@@ -1,5 +1,5 @@
 // Example
-$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/gh-pages/schemas/maker-v1.json", function(json) {
+$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/gh-pages/maker.json", function(json) {
     $("#example_json").append(JSON.stringify(json, null, "  "));
 });
 

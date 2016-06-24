@@ -12,6 +12,20 @@ header {
 	margin-bottom: 2rem;
 }
 
+h2.title {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: .3rem;
+}
+
+code {
+    background-color: rgb(244, 200, 243);
+}
+
+#bento ol { counter-reset: item }
+#bento li { display: block }
+#bento li:before { content: counters(item, ".") ". "; counter-increment: item }
+
 #results {
     height: 200px;
     border: 2px #000 solid;
@@ -24,9 +38,4 @@ header {
 }
 #validate_result {
     margin-top: 20px;
-}
-#status {
-    color: #fff;
-    background-color: red;
-    padding: 10px;
 }

@@ -2,7 +2,7 @@
 layout: default
 title: Specification
 ---
-<h2>Specification</h2>
+<h2 class="title">Specification</h2>
 
 <h3>Language</h3>
 <p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in <a href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
@@ -17,38 +17,52 @@ title: Specification
 <p>The following fields MUST be included:</p>
 <ol>
 	<li><code>name</code> - a string specifying the project's name.</li>
-	<li><code>status</code> - a string indicating the status of the project. The value MUST be one of:</li>
+	<li><code>status</code> - a string (enum) indicating the status of the project. The value MUST be one of:
 	<ol>
-		<li><code>"Ideation"</code> - brainstorming phase.</li>
-		<li><code>"Alpha"</code> - initial prototyping phase and internal testing.</li>
-		<li><code>"Beta"</code> - a product is being tested in public.</li>
-		<li><code>"Production"</code> - finished Product, with development and maintenance ongoing.</li>
-		<li><code>"Archival"</code> - finished Product, but no longer actively maintained.</li>
+		<li><code>"Unknown"</code> - No update or recent update provided.</li>
+		<li><code>"Active"</code> - The space is open.</li>
+		<li><code>"Inactive"</code> - The space is closed</li>
+		<li><code>"Planned"</code> - The space is in the planning stages to open.</li>
 	</ol>
-	<li><code>tags</code> - an array of tag strings to help people search for your project, which SHOULD have at least one item.</li>
+	</li>
+	<li><code>type</code> - An array specifying the type of space. Multiple types are allowed.</li>
+	<ol>
+		<li><code>"Makerspace"</code> - Your makerspace shop with fabrication tools, computer stations, and community space.</li>
+						<li><code>"Fab Lab"</code> - As above, but ONLY those officially affiliated as Fab Labs.</li>
+						<li><code>"TechShop"</code> - As above, but ONLY those officially affiliated as TechShops.</li>
+						<li><code>"Hackerspace"</code> - A community space more focused on </li>
+						<li><code>"Coworking Space"</code> - Open floor plans for startups and small businesses, not necessarily hackers only.</li>
+						<li><code>"Innovation Lab"</code> - A space within larger organizations focused on emerging innovations or researching and development practices.</li>
+						<li><code>"University Lab"</code> - Sharing many of the principles above but supported by an educational institution and may or may not be only open to students.</li>
+						<li><code>"Library"</code> - Libraries as we know them but now offerings access to and workshops about DIY and fabrication topics (i.e. 3D printers).</li>
+	</ol>
 </ol>
-<h4>Strongly recommended</h4>
+
+<h4>Recommended</h4>
 <p>In addition to the above fields, the following fields SHOULD be included in every maker.json, where applicable:</p>
 <ol>
-	<li><code>contact</code> - an object providing the individual or group fielding questions about the project. The object structure MUST contain a <code>name</code> property and SHOULD contain an <code>email</code> and/or <code>url</code> property.</li>
-	<li><code>description</code> - a description of the project usable as a summary.</li>
-	<li><code>homepage</code> - the project's URL, if it is a website, or the URL of a site describing the project.</li>
-	<li><code>id</code> - the URL describing the schema of the maker.json file.</li>
-	<li><code>license</code> - a field specifying the license under which the project is provided. <strong>This property is not legally binding and does not guarantee that the project is licensed under the terms defined in this property.</strong> The value of
-		the propery SHOULD be a current <a href="https://spdx.org/licenses/">SPDX license identifier</a> for the license you're using—preferably one that is <a href="https://opensource.org/licenses/alphabetical">OSI approved</a>. Alternatively, you MAY provide
-		the url to a license file.</li>
-	<li><code>repository</code> - the project's public repository URL.</li>
+	<li><code>source</code> - The source of this information. This could be a website, person, email address, or media source.</li>
+	<li><code>description</code> - A brief summary of the location and/or community. A good description should not reiterate other parts of the schema such as available tools or location but offer details on the mission, vision, history, and values.</li>
+	<li><code>address</code> - A string specifying the physical address of the location. This information SHOULD only include the street address or relative structures/business if that's not available. It SHOULD NOT other administrative information (to include separately, see below).</li>
+	<li><code>city</code> - The city in which the space is located.</li>
+	<li><code>division</code> - The state, province, district, or boundary in which the space is located.</li>
+	<li><code>country</code> - The country in which the space is located.</li>
+	<li><code>latitude</code> - A decimal of the exact latitude of the space.</li>
+	<li><code>longitude</code> - A decimal of the exact longitude of the space. </li>
+	<li><code>website</code> - The official website of the space, if available.</li>
+	<li><code>phone</code> - The official phone number for the space, if available.</li>
+	<li><code>mailing-list</code> - The address of a mailing list, if available.</li>
+	<li><code>email</code> - A contact email for the space, if available.</li>
+	<li><code>social</code> - An array of the social media accounts associated with the space.</li>
+	<li><code>tools</code> - An array of the available tools within the space. This is geared more toward the makerspaces.</li>
 </ol>
-<h4>Recommended</h4>
-<p>The following are commonly used fields that your maker.json MAY contain:</p>
-<ol>
-	<li><code>data</code> - an array of data objects, describing the data sources used in the project. Each data object MUST include <code>name</code> and <code>url</code> properties, giving the dataset's name and download URL, respectively. Each data object
-		SHOULD also include a <code>metadata</code> property, providing the URL where the dataset's metadata can be read.</li>
-	<li><code>geography</code> - an array of geography strings, indicating the city, state, county, or other geographic entity the project is relevant to.</li>
-	<li><code>links</code> - an array of link strings, giving any additional webpage URLs relevant to your project.</li>
-	<li><code>partners</code> - an array of partner objects, describing the primary individuals or groups that contributing to the project. Each partner object MUST contain a <code>name</code> property and SHOULD contain an <code>email</code> and/or <code>url</code>		property.</li>
-	<li><code>thumbnail</code> - the URL of an image file (e.g. logo or screenshot) to be used in a project listing.</li>
-	<li><code>type</code> - a string describing the type of project.</li>
-</ol>
+
 <h4>Other</h4>
-<p>You MAY include other fields not listed above.</p>
+<p>You MAY want to include other fields not listed above.</p>
+<ol>
+	<li><code>number-of-members</code> - The average or estimated number of members in the space.</li>
+	<li><code>membership-fee</code> - A string explaining any membership costs and frequency.</li>
+	<li><code>open-to-exchanges</code> - A boolean for if the space is open to exchanging tools.</li>
+	<li><code>open-to-residences</code> - A boolean for if the space offers residencies.</li>
+	<li><code>size-of-rooms</code> - The average or estimated size of the rooms.</li>
+</ol>
