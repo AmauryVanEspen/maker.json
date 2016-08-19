@@ -1,5 +1,5 @@
 // Example
-$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/gh-pages/maker.json", function(json) {
+$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/gh-pages/example-maker.json", function(json) {
 	$("#example_json").append(JSON.stringify(json, null, "  "));
 });
 
@@ -11,7 +11,7 @@ $.getJSON("./schemas/maker-v1.json", function(json) {
       "form": {
         "btn btn-defaults": {
           "submit": {
-            "title": "Generate maker.json",
+            "title": "Generate your maker.json file",
             "styles": "btn btn-default",
             "click": function() {
               var val = this.getValue();
