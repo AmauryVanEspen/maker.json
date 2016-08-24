@@ -1,18 +1,12 @@
-
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://raw.githubusercontent.com/rrbaker/maker.json/master/schemas/schema-v1.json",
   "type": "object",
-  "required": [
-    "status",
-    "name",
-    "tags"
-  ],
   "properties": {
     "name": {
-      "title": "Location Name",
+      "title": "Location name",
       "type": "string",
-      "minLength": 1
+      "minimum": 1
     },
     "status": {
       "title": "Status",
@@ -23,111 +17,119 @@
         "Inactive",
         "Unknown",
         "Planned"
-      ]
+      ],
+      "minItems": 1,
+      "uniqueItems": true
     },
     "type": {
       "title": "Type",
-      "description": "Type of space",
+      "description": "What is the nature of the work space",
       "type": "array",
-      "items": [
+      "enum": [
         "Makerspace",
         "Hackerspace"
       ]
     },
+    "source": {
+      "title": "Source",
+      "description": "Where this information is from",
+      "type": "string"
+    },
+    "address": {
+      "title": "Address",
+      "description": "",
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "division": {
+      "title": "Division",
+      "description": "Could also be country, province, or region",
+      "type": "string"
+    },
+    "country": {
+      "title": "Country",
+      "type": "string"
+    },
+    "latitude": {
+      "title": "Latitude",
+      "type": "number"
+    },
+    "longitude": {
+      "title": "Longitude",
+      "type": "number"
+    },
     "description": {
-      "title": "description",
-      "description": "Project description",
+      "title": "Description",
+      "description": "A brief description of the space, mission, and/or vision",
       "type": "string"
     },
-    "type": {
-      "title": "type",
-      "description": "Project type",
+    "email": {
+      "title": "Email",
       "type": "string"
     },
-    "license": {
-      "title": "license",
-      "description": "Project license identifier",
+    "website": {
+      "title": "Website",
+      "description": "The main website; social media is separate",
       "type": "string"
     },
-    "homepage": {
-      "title": "homepage URL",
-      "description": "Project homepage URL",
-      "type": "string"
-    },
-    "thumbnail": {
-      "title": "thumbnail URL",
-      "description": "Project thumbnail image URL",
-      "type": "string"
-    },
-    "repository": {
-      "title": "repository URL",
-      "description": "Project repository URL",
-      "type": "string"
-    },
-    "geography": {
-      "title": "geographic tags",
-      "description": "Project geographic/location tags",
-      "type": "array",
-      "items": {
-        "title": "tag",
-        "type": "string"
-      }
-    },
-    "data": {
-      "title": "data",
-      "description": "Data sets used in project",
-      "type": "array",
-      "items": {
-        "required": [
-          "name",
-          "url"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "title": "name",
-            "description": "Data set name",
-            "type": "string"
-          },
-          "url": {
-            "title": "direct URL",
-            "description": "Data set URL",
-            "type": "string"
-          },
-          "metadata": {
-            "title": "metadata URL",
-            "description": "Data set metadata URL",
-            "type": "string"
-          }
-        }
+    "social": {
+      "title": "Social media sites",
+      "type": "object",
+      "properties": {
+        "facebook": { "type": "string" },
+        "twitter": { "type": "string" },
+        "google": { "type": "string" },
+        "youtube": { "type": "string" },
+        "flickr": { "type": "string" }
       },
-      "uniqueItems": true
     },
-    "tags": {
-      "title": "tags",
-      "description": "Project tags",
-      "type": "array",
-      "items": {
-        "title": "tag",
-        "type": "string"
-      },
-      "uniqueItems": true
+    "mailing-list": {
+      "title": "Mailing list",
+      "description": "Email address or website to sign up",
+      "type": "string"
     },
-    "links": {
-      "title": "links",
-      "description": "Project links",
-      "type": "array",
-      "items": {
-        "title": "URL",
-        "type": "string"
-      },
-      "uniqueItems": true
+    "phone": {
+      "title": "Phone number",
+      "description": "Main number for more information",
+      "type": "string"
     },
-    "id": {
-      "title": "schema URL",
-      "description": "Civic.json schema URL",
-      "type": "string",
-      "default": "https://raw.githubusercontent.com/rrbaker/maker.json/master/schemas/schema-v1.json"
+    "tools": {
+      "title": "Tools",
+      "type": "string"
+    },
+    "last-updated": {
+      "title": "Last updated",
+      "type": "string"
+    },
+    "number-of-members": {
+      "title": "Number of members",
+      "description": "An estimate of current and active individuals involved",
+      "type": "integer"
+    },
+    "date-founded": {
+      "title": "Date founded",
+      "type": "string"
+    },
+    "size-of-rooms": {
+      "title": "Size of rooms",
+      "description": "An average size",
+      "type": "string"
+    },
+    "open-to-exchanges": {
+      "title": "Open to exchanegs",
+      "description": "If the space is open to exchanging resources with others",
+      "type": "boolean"
+    },
+    "open-to-residencies": {
+      "title": "Open to residencies",
+      "type": "boolean"
+    },
+    "membership-fee": {
+      "title": "Membership fee",
+      "type": "string"
     }
-  }
+  },
+  "required": ["name", "status", "type"]
 }
