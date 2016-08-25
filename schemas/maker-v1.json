@@ -83,7 +83,7 @@
         "google": { "type": "string" },
         "youtube": { "type": "string" },
         "flickr": { "type": "string" }
-      },
+      }
     },
     "mailing-list": {
       "title": "Mailing list",
