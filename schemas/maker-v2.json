@@ -1,0 +1,244 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/rrbaker/maker.json/master/schemas/schema-v1.json",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "type": "string",
+      "minimum": 1
+    },
+    "status": {
+      "title": "Status",
+      "type": "string",
+      "default": "Active",
+      "enum": [
+        "In Operation",
+        "Planned space",
+        "Closed",
+        "Unknown"
+      ],
+      "minItems": 1
+    },
+    "type": {
+      "title": "Type",
+      "description": "What is the nature of the work space",
+      "type": "array",
+      "enum": [
+        "Hub",
+        "Lab/Community workshop",
+        "Event",
+        "Art space and/or gallery",
+        "Intentional living community",
+        "Factory"
+      ]
+    },
+    "source": {
+      "title": "Source",
+      "description": "Where this information is from",
+      "type": "string"
+    },
+    "address": {
+      "title": "Address",
+      "description": "If applicable",
+      "type": "string"
+    },
+    "city": {
+      "title": "City",
+      "type": "string"
+    },
+    "division": {
+      "title": "State/City/Province",
+      "description": "The larger ",
+      "type": "string"
+    },
+    "country": {
+      "title": "Country",
+      "type": "string"
+    },
+    "latitude": {
+      "title": "Latitude",
+      "type": "number"
+    },
+    "longitude": {
+      "title": "Longitude",
+      "type": "number"
+    },
+    "description": {
+      "title": "Description",
+      "description": "A brief description of the space, mission, and/or vision",
+      "type": "string"
+    },
+    "email": {
+      "title": "Email",
+      "type": "string"
+    },
+    "website": {
+      "title": "Website",
+      "description": "The primary website (social media is listed separately)",
+      "type": "string"
+    },
+    "social": {
+      "title": "Social media sites",
+      "type": "object",
+      "properties": {
+        "facebook": { "type": "string" },
+        "twitter": { "type": "string" },
+        "google": { "type": "string" },
+        "youtube": { "type": "string" },
+        "flickr": { "type": "string" },
+        "meetup": { "type": "string" },
+        "hackerspaces-url": { "type": "string" },
+        "fablabs-url": { "type": "string" },
+        "jabber": { "type": "string" }
+      }
+    },
+    "documentation": {
+      "title": "Documentation/Wiki",
+      "type": "object",
+      "properties": {
+        "github": { "type": "string" },
+        "instructables": { "type": "string" }
+      }
+    },
+    "mailing-list": {
+      "title": "Mailing list",
+      "description": "Email address or website to sign up",
+      "type": "string"
+    },
+    "phone": {
+      "title": "Phone number",
+      "description": "Main number for more information",
+      "type": "string"
+    },
+    "tools": {
+      "title": "Tools",
+      "type": "string"
+    },
+    "last-updated": {
+      "title": "Last updated",
+      "type": "string"
+    },
+    "number-of-members": {
+      "title": "Number of members",
+      "description": "An estimate of current and active individuals involved",
+      "type": "integer"
+    },
+    "date-founded": {
+      "title": "Date founded",
+      "type": "string"
+    },
+    "size-of-rooms": {
+      "title": "Size of rooms",
+      "description": "An average size",
+      "type": "string"
+    },
+    "open-to-exchanges": {
+      "title": "Open to exchanegs",
+      "description": "If the space is open to exchanging resources with others",
+      "type": "boolean"
+    },
+    "housing-available": {
+      "title": "Housing available",
+      "type": "boolean"
+    },
+    "open-to-residencies": {
+      "title": "Open to residencies",
+      "type": "boolean"
+    },
+    "membership-fee": {
+      "title": "Membership fee",
+      "type": "string"
+    },
+    "services": {
+      "title": "Services",
+      "description": "Services provided",
+      "type": "array",
+      "enum": [
+        "Coworking",
+        "Making",
+        "Hosting events",
+        "Selling and trading",
+        "Incubating startups",
+        "Educating",
+        "Vocational training",
+        "Investing",
+        "Mentoring",
+        "Donating",
+        "Transferring technology",
+        "Co-living",
+        "Repairing",
+        "Manufacturing",
+        "Prototyping",
+        "Researching"
+      ]
+    }
+  },
+  "access": {
+    "title": "Access",
+    "description": "Level of access to the space",
+    "type": "array",
+    "enum": [
+      "Open",
+      "Restricted",
+      "Restricted with public hours"
+    ]
+  },
+  "primary-type": {
+    "title": "Primary Type",
+    "type": "array",
+    "enum": [
+      "Makerspace",
+      "Hackerspace",
+      "Coworking space",
+      "Art space/gallery",
+      "Tech Hub",
+      "Event",
+      "Innovation Lab",
+      "Intentional Living Community",
+      "Factory"
+    ]
+  },
+  "network-affiliation": {
+    "title": "Network Affiliation",
+    "type": "array",
+    "enum": [
+      "Hackerspaces.org",
+      "Fab Lab Network",
+      "Mini Fab Labs",
+      "Fab Cafés",
+      "Impact Hub",
+      "AfriLabs",
+      "Global Ecovillage Network",
+      "Hackerbases",
+      "MakerFaire",
+      "Men’s Sheds",
+      "Repair cafe",
+      "TechShop",
+      "Global Innovation Gathering"
+    ]
+  },
+  "host": {
+    "title": "Host",
+    "type": "array",
+    "enum": [
+      "Civil Society",
+      "Business",
+      "Academic",
+      "Government",
+      "Hybrid"
+    ]
+  },
+  "size": {
+    "title": "Size",
+    "type": "array",
+    "enum": [
+      "One room",
+      "Several rooms",
+      "Entire building",
+      "Cluster or village",
+      "Temporary"
+    ]
+  },
+  "required": ["name", "status", "type"]
+}
