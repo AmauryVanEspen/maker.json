@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/rrbaker/maker.json/master/schemas/schema-v1.json",
+  "id": "https://raw.githubusercontent.com/rrbaker/maker.json/master/schemas/schema-v2.json",
   "type": "object",
   "properties": {
     "name": {
@@ -48,7 +48,7 @@
       "type": "string"
     },
     "division": {
-      "title": "State/City/Province",
+      "title": "State/Province",
       "description": "The larger ",
       "type": "string"
     },
@@ -67,7 +67,8 @@
     "description": {
       "title": "Description",
       "description": "A brief description of the space, mission, and/or vision",
-      "type": "string"
+      "type": "string",
+      "minimum": 1
     },
     "email": {
       "title": "Email",
@@ -78,19 +79,32 @@
       "description": "The primary website (social media is listed separately)",
       "type": "string"
     },
+    "logo": {
+      "title": "Logo",
+      "description": "The complete URL to your logo image file.",
+      "type": "string"
+    },
+    "photo": {
+      "title": "Photo",
+      "description": "A photo of your space, interior or exterior.",
+      "type": "string"
+    },
     "social": {
       "title": "Social media sites",
       "type": "object",
       "properties": {
         "facebook": { "type": "string" },
         "twitter": { "type": "string" },
+        "meetup": { "type": "string" },
         "google": { "type": "string" },
         "youtube": { "type": "string" },
         "flickr": { "type": "string" },
-        "meetup": { "type": "string" },
         "hackerspaces-url": { "type": "string" },
         "fablabs-url": { "type": "string" },
-        "jabber": { "type": "string" }
+        "jabber": { "type": "string" },
+        "ustream": { "type": "string" },
+        "spaceapi": { "type": "string" },
+        "irc": { "type": "string" }
       }
     },
     "documentation": {
@@ -98,7 +112,8 @@
       "type": "object",
       "properties": {
         "github": { "type": "string" },
-        "instructables": { "type": "string" }
+        "instructables": { "type": "string" },
+        "wiki": { "type": "string" }
       }
     },
     "mailing-list": {
@@ -179,7 +194,7 @@
     "description": "Level of access to the space",
     "type": "array",
     "enum": [
-      "Open",
+      "Public",
       "Restricted",
       "Restricted with public hours"
     ]
@@ -212,7 +227,7 @@
       "Global Ecovillage Network",
       "Hackerbases",
       "MakerFaire",
-      "Men’s Sheds",
+      "Men's Sheds",
       "Repair cafe",
       "TechShop",
       "Global Innovation Gathering"
@@ -223,10 +238,9 @@
     "type": "array",
     "enum": [
       "Civil Society",
-      "Business",
       "Academic",
       "Government",
-      "Hybrid"
+      "Private Sector"
     ]
   },
   "size": {
@@ -236,8 +250,7 @@
       "One room",
       "Several rooms",
       "Entire building",
-      "Cluster or village",
-      "Temporary"
+      "Cluster or village"
     ]
   },
   "required": ["name", "status", "type"]
